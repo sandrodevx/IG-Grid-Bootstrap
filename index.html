@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Instagram Feed - 1 Columna</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
+  </head>
+  <body class="bg-light">
+    <!-- Navbar -->
+    <nav class="navbar bg-white shadow-sm fixed-top">
+      <div class="container">
+        <!-- Logo y nombre -->
+        <a class="navbar-brand" href="#">
+          <i class="bi bi-instagram fs-3 text-danger"></i>
+          <!-- Icono de Instagram -->
+          <span class="ms-2">Instagram</span>
+          <!--Nombre de la marca -->
+        </a>
+
+        <!-- Botones -->
+        <div>
+          <!-- Botón para crear nueva publicación -->
+          <button
+            class="btn btn-success btn-sm me-2"
+            data-bs-toggle="modal"
+            data-bs-target="#createPostModal"
+          >
+            <i class="bi bi-plus-lg"></i> Create New Post
+            <!-- Icono de "más" -->
+          </button>
+
+          <!-- Botón de ajustes -->
+          <button
+            class="btn btn-link text-dark"
+            data-bs-toggle="modal"
+            data-bs-target="#settingsModal"
+          >
+            <i class="bi bi-gear"></i>
+            <!-- Icono de engranaje -->
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Modal de "Create New Post" -->
+    <div
+      class="modal fade"
+      id="createPostModal"
+      tabindex="-1"
+      aria-labelledby="createPostModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="createPostModalLabel">
+              Crear Nueva Publicación
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="mb-3">
+                <label for="post-title" class="form-label">Título</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="post-title"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="post-description" class="form-label"
+                  >Descripción</label
+                >
+                <textarea
+                  class="form-control"
+                  id="post-description"
+                  rows="3"
+                  required
+                ></textarea>
+              </div>
+              <div class="mb-3">
+                <label for="post-image" class="form-label">Subir Imagen</label>
+                <input
+                  type="file"
+                  class="form-control"
+                  id="post-image"
+                  accept="image/*"
+                  required
+                />
+              </div>
+              <button type="submit" class="btn btn-primary">Publicar</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal de "Settings" -->
+    <div
+      class="modal fade"
+      id="settingsModal"
+      tabindex="-1"
+      aria-labelledby="settingsModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="settingsModalLabel">Ajustes</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <ul class="list-group">
+              <li class="list-group-item">Cambiar contraseña</li>
+              <li class="list-group-item">Privacidad</li>
+              <li class="list-group-item">Notificaciones</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="container pt-5 mt-5">
+      <!-- Botones de cambio de grid -->
+      <div class="d-flex justify-content-center gap-2 my-4">
+        <!-- Botón de 1 columna (activo) -->
+        <a href="" class="btn btn-primary">
+          <i class="bi bi-grid"></i>
+          <!-- Icono de grid 1 columna -->
+        </a>
+        <!-- Botón de 3 columnas -->
+        <a href="grid-3-columnas.html" class="btn btn-outline-secondary">
+          <i class="bi bi-grid-3x3"></i>
+          <!-- Icono de grid 3 columnas -->
+        </a>
+      </div>
+
+      <!-- Grid de posts -->
+      <div class="row row-cols-1" id="postGrid">
+        <!-- Publicación 1 -->
+        <div class="col mb-4">
+          <div class="card mx-auto" style="max-width: 600px">
+            <div class="card-header fw-bold">Random Post</div>
+            <img
+              src="https://picsum.photos/600/600?random=1"
+              class="card-img-top"
+            />
+            <div class="card-body">
+              <p class="card-text text-muted">Mi Primer Post</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Publicación 2 -->
+        <div class="col mb-4">
+          <div class="card mx-auto" style="max-width: 600px">
+            <div class="card-header fw-bold">Random Post 2</div>
+            <img
+              src="https://picsum.photos/600/600?random=2"
+              class="card-img-top"
+            />
+            <div class="card-body">
+              <p class="card-text text-muted">Mi segunda pelicula</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Publicación 3 -->
+        <div class="col mb-4">
+          <div class="card mx-auto" style="max-width: 600px">
+            <div class="card-header fw-bold">Random Post 3</div>
+            <img
+              src="https://picsum.photos/600/600?random=3"
+              class="card-img-top"
+            />
+            <div class="card-body">
+              <p class="card-text text-muted">Mi tercer Post random</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Scripts de Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

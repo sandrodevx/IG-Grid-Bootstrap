@@ -1,29 +1,27 @@
-# Instagram Feed con Bootstrap
+# Instagram Feed Clone
 
 [View Live Page](https://sandrodevx.github.io/IG-Grid-Bootstrap/)
 
-Este proyecto es una réplica de un feed de fotos similar al de Instagram, desarrollado utilizando **Bootstrap 5** y **HTML**. El objetivo es practicar el uso de componentes de Bootstrap, como el sistema de grid, modales, dropdowns y tarjetas, para crear una interfaz funcional y responsive.
+Este proyecto es un clon de un feed de Instagram, desarrollado utilizando **HTML**, **Bootstrap 5** y **Bootstrap Icons**. El diseño es completamente responsive, adaptándose a diferentes tamaños de pantalla (móviles, tablets y pantallas grandes). Además, incluye funcionalidades como modales para crear publicaciones y ajustes.
 
 ---
 
 ## Características principales
 
-- **Navbar fijo**: Con logo de Instagram, campo de búsqueda y botones para crear publicaciones y acceder a ajustes.
-- **Modal de creación de publicaciones**: Permite agregar un título, descripción, etiquetas (hashtags) y subir una imagen.
-- **Dos vistas de grid**:
-  - **1 columna**: Ideal para dispositivos móviles.
-  - **3 columnas**: Perfecta para pantallas más grandes.
-- **Tarjetas de publicaciones**: Cada publicación incluye un título, una imagen aleatoria (usando [Picsum](https://picsum.photos)) y una descripción.
-- **Diseño responsive**: Se adapta a diferentes tamaños de pantalla.
+- **Diseño responsive**:
+  - **Móviles**: 1 columna de imágenes.
+  - **Tablets**: 2 columnas de imágenes.
+  - **Pantallas grandes**: 3 columnas de imágenes.
 
----
+- **Navbar fijo**:
+  - Barra de navegación en la parte superior con botones para crear publicaciones y ajustes.
 
-## Tecnologías utilizadas
+- **Modales**:
+  - Modal para crear nuevas publicaciones.
+  - Modal para ajustes (cambiar contraseña, privacidad, notificaciones).
 
-- **HTML5**: Estructura del contenido.
-- **Bootstrap 5**: Framework de diseño para estilos y componentes.
-- **Bootstrap Icons**: Iconos para botones y elementos visuales.
-- **Picsum**: Servicio para obtener imágenes aleatorias.
+- **Botones de cambio de vista**:
+  - Alternar entre vista de 1 columna y vista de 3 columnas.
 
----
-
+- **Imágenes dinámicas**:
+  - Las imágenes se cargan dinámicamente usando [Picsum](https://picsum.photos/).
